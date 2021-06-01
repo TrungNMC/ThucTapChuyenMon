@@ -215,7 +215,9 @@ svg:not(:root) {
 }
 
 table {
+  width: 100%;
   border-collapse: collapse;
+  text-align: center;
 }
 
 caption {
@@ -1676,7 +1678,8 @@ pre code {
 .table th,
 .table td {
   padding: 0.75rem;
-  vertical-align: top;
+  text-align: center;
+  vertical-align: center;
   border-top: 1px solid #dee2e6;
 }
 

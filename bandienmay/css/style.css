@@ -112,9 +112,6 @@ label {
     color: #0879c9;
 }
 
-.modal-content {
-    border: 10px solid rgba(244, 92, 93, 0.82);
-}
 
 label.col-form-label {
     letter-spacing: 1px;

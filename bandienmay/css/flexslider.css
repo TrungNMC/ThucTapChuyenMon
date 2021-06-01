@@ -59,7 +59,7 @@
 }
 
 .flexslider .slides img {
-  width: 100%;
+  width: auto;
   display: block;
 }
 
@@ -108,7 +108,10 @@ html[xmlns] .flexslider .slides {
 }
 
 .flexslider .slides img {
-  height: auto;
+  height: 500px;
+  margin-left: auto;
+	margin-right: auto;
+  width: auto;
   -moz-user-select: none;
 }
 
@@ -137,7 +140,7 @@ html[xmlns] .flexslider .slides {
   display: none;
 }
 
-/*
+
 .flex-direction-nav a:before {
   font-family: "flexslider-icon";
   font-size: 40px;
@@ -176,7 +179,7 @@ html[xmlns] .flexslider .slides {
 
 .flexslider:hover .flex-direction-nav .flex-next:hover {
   opacity: 1;
-} */
+} 
 
 .flex-direction-nav .flex-disabled {
   opacity: 0 !important;

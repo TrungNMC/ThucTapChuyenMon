@@ -14,7 +14,6 @@
  	}else{
  		$soluong = $soluong;
  		$sql_giohang = "INSERT INTO tbl_giohang(tensanpham,sanpham_id,giasanpham,hinhanh,soluong) values ('$tensanpham','$sanpham_id','$gia','$hinhanh','$soluong')";
-
  	}
  	$insert_row = mysqli_query($con,$sql_giohang);
  	// if($insert_row==0){

@@ -43,4 +43,5 @@
             }
         }, 5000);
         </script>
+        <br/><br/>
     <!-- Slider Bar End -->

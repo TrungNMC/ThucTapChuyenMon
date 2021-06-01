@@ -1,6 +1,5 @@
 <?php
-	// session_destroy();
-	// unset('dangnhap');
+error_reporting(0);
 	if(isset($_POST['dangnhap_home'])) {
 		$taikhoan = $_POST['email_login'];
 		$matkhau = md5($_POST['password_login']);
@@ -42,36 +41,41 @@
 	<div class="agile-main-top">
 		<div class="container-fluid">
 			<div class="row main-top-w3l py-2">
-				<div class="col-lg-3 header-most-top">
-					
-				</div>
+
 				<div class="col-lg-8 header-right mt-lg-0 mt-2">
 					<!-- header lists -->
 					<ul>
-
-						<?php
-						if(isset($_SESSION['dangnhap_home'])){ 
-						?>
-						<li class="text-center border-right text-white">
-							<a href="index.php?quanly=xemdonhang&khachhang=<?php echo $_SESSION['khachhang_id'] ?>" class="text-white">
-								<i class="fas fa-truck mr-2"></i>Đơn hàng : <?php echo $_SESSION['dangnhap_home'] ?></a>
-								<i class="fas fa-truck mr-2"></i>Đăng xuất : <?php echo $_SESSION['dangnhap_home'] ?></a>
+						<?php if(strlen($_SESSION['dangnhap_home']))
+						{ ?>
+						<li class="text-center border-right text-white"  style="padding-right: 25px;width: 25%;"><a href="index.php?quanly=xemdonhang&khachhang=<?php echo $_SESSION['khachhang_id'] ?>" class="text-white"><i class="fas fa-truck mr-2"></i>Đơn hàng : 
+							<?php echo $_SESSION['dangnhap_home'] ?></a></li>
+						<?php } ?>
+						<li class="text-center border-right text-white" style="margin-left: 20px;padding-right: 25px;width: 25%;">
+							<i class="fa fa-map-marker" aria-hidden="true"></i> Quận 9 - TP Thủ Đức
 						</li>
-						<?php
-					}
-						?>
+
 						<li class="text-center border-right text-white">
 							<i class="fas fa-phone mr-2"></i> 0357640009
 						</li>
-						<li class="text-center border-right text-white">
+						<?php if(strlen($_SESSION['dangnhap_home'])==0)
+						{ ?>
+							<li class="text-center border-right text-white">
 							<a href="#" data-toggle="modal" data-target="#dangnhap" class="text-white">
-								<i class="fas fa-sign-in-alt mr-2"></i>Đăng nhập</a>
+								<i class="fas fa-sign-in-alt mr-2"></i> Đăng nhập</a>
 						</li>
 						<li class="text-center text-white">
 							<a href="#" data-toggle="modal" data-target="#dangky" class="text-white">
-								<i class="fas fa-sign-out-alt mr-2"></i>Đăng ký</a>
+								<i class="fas fa-sign-out-alt mr-2"></i> Đăng ký</a>
+						</li>	
+						<?php }
+						else{?>
+									<li class="text-center text-white">
+							<a href="/bandienmay/include/logout.php" class="text-white">
+								<i class="fas fa-sign-in-alt mr-2"></i> Đăng xuất</a>
 						</li>
+							<?php } ?>
 						
+					
 					</ul>
 					<!-- //header lists -->
 				</div>
@@ -169,10 +173,10 @@
 		<div class="container">
 			<div class="row header-bot_inner_wthreeinfo_header_mid">
 				<!-- logo -->
-				<div class="col-md-3 logo_agile" style="margin-bottom: 50px;">
+				<div class="col-md-1 logo_agile" style="margin-bottom: 55px;margin-right: 150px; ">
 					<h1 class="text-center">
 						<a >
-							<img src="images/logo2.png" alt="">
+							<img src="images/logo2.png" alt="" width="100px">
 						</a>
 					</h1>
 				</div>
@@ -183,7 +187,7 @@
 						<!-- search -->
 						<div class="col-10 agileits_search">
 							<form class="form-inline" action="index.php?quanly=timkiem" method="POST">
-								<input class="form-control mr-sm-2" style="border-radius: 30px;" name="search_product" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search" required>
+								<input class="form-control mr-sm-2" style="border-radius: 30px;padding-left: 30px;" name="search_product" type="search" placeholder="Sản phẩm ..." aria-label="Search" required>
 								<button class="btn my-2 my-sm-0" name="search_button" type="submit" style="border-radius: 30px;">Tìm kiếm</button>
 							</form>
 						</div>

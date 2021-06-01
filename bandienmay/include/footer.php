@@ -54,7 +54,7 @@
 				<div class="row footer-info w3-agileits-info">
 					<!-- footer categories -->
 					<div class="col-md-3 col-sm-6 footer-grids">
-						<h3 class="text-white font-weight-bold mb-3">Categories</h3>
+						<h3 class="text-white font-weight-bold mb-3">Danh mục</h3>
 						<ul>
 							<li class="mb-3">
 								<a href="product.html">TV</a>
@@ -93,7 +93,7 @@
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-6 footer-grids mt-md-0 mt-4">
-						<h3 class="text-white font-weight-bold mb-3">Get in Touch</h3>
+						<h3 class="text-white font-weight-bold mb-3">Liên lạc</h3>
 						<ul>
 							<li class="mb-3">
 								<i class="fas fa-map-marker"></i> Quận 9 / TP Thủ Đức.</li>
@@ -113,22 +113,22 @@
 					</div>
 					<div class="col-md-3 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
 						<!-- newsletter -->
-						<h3 class="text-white font-weight-bold mb-3">Newsletter</h3>
-						<p class="mb-3">Free Delivery on your first order!</p>
+						<h3 class="text-white font-weight-bold mb-3">Bản tin</h3>
+						<p class="mb-3">Giao hàng miễn phí cho đơn hàng đầu tiên của bạn!</p>
 						<form action="#" method="post">
 							<div class="form-group">
 								<input type="email" class="form-control" placeholder="Email" name="email" required="">
-								<input type="submit" value="Go">
+								<input type="submit" value="Đi">
 							</div>
 						</form>
 						<!-- //newsletter -->
 						<!-- social icons -->
 						<div class="footer-grids  w3l-socialmk mt-3">
-							<h3 class="text-white font-weight-bold mb-3">Follow Us on</h3>
+							<h3 class="text-white font-weight-bold mb-3">Theo dõi chúng tôi tại</h3>
 							<div class="social">
 								<ul>
 									<li>
-										<a class="icon fb" href="#">
+										<a class="icon fb" href="https://www.facebook.com/">
 											<i class="fab fa-facebook-f"></i>
 										</a>
 									</li>
@@ -138,7 +138,7 @@
 										</a>
 									</li>
 									<li>
-										<a class="icon gp" href="#">
+										<a class="icon gp" href="https://mail.google.com/mail/u/0/?pli=1#inbox">
 											<i class="fab fa-google-plus-g"></i>
 										</a>
 									</li>
@@ -262,9 +262,7 @@
 	<!-- copyright -->
 	<div class="copy-right py-3">
 		<div class="container">
-			<p class="text-center text-white">© 2018 Electro Store. All rights reserved | Design by
-				<a href="http://w3layouts.com"> W3layouts.</a>
-			</p>
+		<p class="text-center text-white">2021  © Food - Order All Rights Reserved, được phát triển bởi  <a href="https://www.facebook.com/" style="color: #ccc;">Nguyễn Mai Chí Trung</a></p>
 		</div>
 	</div>
 	<!-- //copyright -->

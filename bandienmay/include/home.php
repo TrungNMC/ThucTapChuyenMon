@@ -86,10 +86,26 @@
 							<h3 class="agileits-sear-head mb-3">Giá</h3>
 							<div class="w3l-range">
 								<ul>
-									<li>
+								<li>
+									<input type="checkbox" class="checked">
 										<a href="#">Dưới 1 triệu</a>
 									</li>
-									
+									<li>
+									<input type="checkbox" class="checked">
+										<a href="#">Từ 1 triệu - 5 triệu</a>
+									</li>
+									<li>
+									<input type="checkbox" class="checked">
+										<a href="#">Từ 5 triệu - 10 triệu</a>
+									</li>
+									<li>
+									<input type="checkbox" class="checked">
+										<a href="#">Trên 10 triệu</a>
+									</li>
+									<li>
+									<input type="checkbox" class="checked">
+										<a href="#">Trên 20 triệu</a>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -100,6 +116,7 @@
 							<h3 class="agileits-sear-head mb-3">Khách hàng Review</h3>
 							<ul>
 								<li>
+								<input type="checkbox" class="checked">
 									<a href="#">
 										<i class="fas fa-star"></i>
 										<i class="fas fa-star"></i>
@@ -107,6 +124,40 @@
 										<i class="fas fa-star"></i>
 										<i class="fas fa-star"></i>
 										<span>5.0</span>
+									</a>
+								</li>
+								<li>
+								<input type="checkbox" class="checked">
+									<a href="#">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<span>4.0</span>
+									</a>
+								</li>
+								<li>
+								<input type="checkbox" class="checked">
+									<a href="#">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<span>3.0</span>
+									</a>
+								</li>
+								<li>
+								<input type="checkbox" class="checked">
+									<a href="#">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<span>2.0</span>
+									</a>
+								</li>
+								<li>
+								<input type="checkbox" class="checked">
+									<a href="#">
+										<i class="fas fa-star"></i>
+										<span>1.0</span>
 									</a>
 								</li>
 								
