@@ -262,7 +262,7 @@
 	<!-- copyright -->
 	<div class="copy-right py-3">
 		<div class="container">
-		<p class="text-center text-white">2021  © Food - Order All Rights Reserved, được phát triển bởi  <a href="https://www.facebook.com/" style="color: #ccc;">Nguyễn Mai Chí Trung</a></p>
+		<p class="text-center text-white">2021  © Electronics - Store, được phát triển bởi  <a href="https://www.facebook.com/" style="color: #ccc;">Nguyễn Mai Chí Trung</a></p>
 		</div>
 	</div>
 	<!-- //copyright -->

@@ -36,7 +36,7 @@ error_reporting(0);
  		header('Location:index.php?quanly=giohang');
 	}
 ?> 
-
+ 
 <!-- top-header -->
 	<div class="agile-main-top">
 		<div class="container-fluid">
@@ -106,7 +106,6 @@ error_reporting(0);
 						<div class="right-w3l">
 							<input type="submit" class="form-control" name="dangnhap_home" value="Đăng nhập">
 						</div>
-						
 						<p class="text-center dont-do mt-3">Chưa có tài khoản?
 							<a href="#" data-toggle="modal" data-target="#dangky">
 								Đăng ký</a>
@@ -195,7 +194,7 @@ error_reporting(0);
 						<!-- cart details -->
 						<div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
 							<div class="wthreecartaits wthreecartaits2 cart cart box_1">
-								<form action="#" method="post" class="last">
+								<form action="index.php?quanly=xemdonhang&khachhang=<?php echo $_SESSION['khachhang_id'] ?>" method="post" class="last">
 									<input type="hidden" name="cmd" value="_cart">
 									<input type="hidden" name="display" value="1">
 									<button class="btn w3view-cart" type="submit" name="submit" value="" style="border-radius: 25px;">

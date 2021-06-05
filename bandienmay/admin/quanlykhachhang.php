@@ -29,6 +29,7 @@ include('includes/navbar.php');
         <thead>
           <tr>
             <th>Thứ tự</th>
+			<th>ID khách hàng</th>
 			<th>Tên khách hàng</th>
 			<th>Số điện thoại</th>
 			<th>Địa chỉ</th>
@@ -45,6 +46,7 @@ include('includes/navbar.php');
 					?> 
 					<tr>
 						<td><?php echo $i; ?></td>
+						<td><?php echo $row_khachhang['khachhang_id']; ?></td>
 						<td><?php echo $row_khachhang['name']; ?></td>
 						<td><?php echo $row_khachhang['phone']; ?></td>
 						<td><?php echo $row_khachhang['address']; ?></td>

@@ -72,8 +72,8 @@
 		<div class="container py-xl-4 py-lg-2">
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<span>C</span>ontact
-				<span>U</span>s
+				<span>L</span>iên
+				<span>H</span>ệ
 			</h3>
 			<!-- //tittle heading -->
 			<div class="row contact-grids agile-1 mb-5">
@@ -84,7 +84,7 @@
 						</div>
 						<h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Địa chỉ</h4>
 						<p>Quận 9
-							<label>Thành Phố Thủ Đức.</label>
+							<label>451 Lê Văn Việt, Tăng Nhơn Phú A, thành phố Thủ Đức, Thành phố Hồ Chí Minh</label>
 						</p>
 					</div>
 				</div>
@@ -115,31 +115,126 @@
 				</div>
 			</div>
 			<!-- form -->
-			<form action="#" method="post">
+			<form action="" method="post">
 				<div class="contact-grids1 w3agile-6">
-					<div class="row">
+				<div class="row">
 						<div class="col-md-6 col-sm-6 contact-form1 form-group">
-							<label class="col-form-label">Name</label>
-							<input type="text" class="form-control" name="Name" placeholder="" required="">
+							<label class="col-form-label">Tiêu đề</label>
+							<input type="text" class="form-control" name="subject" placeholder="Nhập vào tiêu đề của bạn">
 						</div>
 						<div class="col-md-6 col-sm-6 contact-form1 form-group">
+							<label class="col-form-label">Name</label>
+							<input type="text" class="form-control" name="name" placeholder="Nhập vào tên của bạn">
+						</div>
+					</div>
+					<div class="row">
+					<div class="col-md-6 col-sm-6 contact-form1 form-group">
 							<label class="col-form-label">E-mail</label>
-							<input type="email" class="form-control" name="Email" placeholder="" required="">
+							<input type="email" class="form-control" name="email" placeholder="Nhập vào email của bạn">
+						</div>
+						<div class="col-md-6 col-sm-6 contact-form1 form-group">
+							<label class="col-form-label">Password</label>
+							<input type="password" class="form-control" name="password" placeholder="Nhập vào password của bạn" style="background: #EAEAEA;font-size: 14px;padding: 10px;">
 						</div>
 					</div>
 					<div class="contact-me animated wow slideInUp form-group">
 						<label class="col-form-label">Message</label>
-						<textarea name="Message" class="form-control" placeholder="" required=""> </textarea>
+						<textarea name="body" class="form-control"></textarea>
 					</div>
 					<div class="contact-form">
-						<input type="submit" value="Submit">
+						<button type="submit" name="send" class="btn btn-success">Gửi liên hệ</button>
 					</div>
 				</div>
 			</form>
 			<!-- //form -->
+			<?php
+if(isset($_POST["send"])){
+    $sb = $_POST["subject"];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $body = $_POST["body"];
+    //SMTP needs accurate times, and the PHP time zone MUST be set
+    //This should be done in your php.ini, but this is how to do it if you don't have access to that
+    date_default_timezone_set('Etc/UTC');
+
+    require 'smtpmail/PHPMailerAutoload.php';
+    //Create a new PHPMailer instance
+    $mail = new PHPMailer();
+    $mail->CharSet = 'UTF-8';
+    //Tell PHPMailer to use SMTP
+    $mail->isSMTP();
+
+    //Enable SMTP debugging
+    // 0 = off (for production use)
+    // 1 = client messages
+    // 2 = client and server messages
+    $mail->SMTPDebug = 0;
+
+    //Ask for HTML-friendly debug output
+    $mail->Debugoutput = 'html';
+
+    //Set the hostname of the mail server
+    $mail->Host = 'smtp.gmail.com';
+
+    //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
+    $mail->Port = 587;
+
+    //Set the encryption system to use - ssl (deprecated) or tls
+    $mail->SMTPSecure = 'tls';
+
+    //Whether to use SMTP authentication
+    $mail->SMTPAuth = true;
+
+    //Username to use for SMTP authentication - use full email address for gmail
+    $mail->Username = "$email";
+
+    //Password to use for SMTP authentication
+    $mail->Password = "$password";
+
+    //Set who the message is to be sent from
+    $mail->setFrom($email, 'Khách hàng');
+
+    //Set an alternative reply-to address
+    $mail->addReplyTo($email, 'Khách hàng');
+
+    //Set who the message is to be sent to
+    $mail->addAddress('5951071112@st.utc2.edu.vn', 'Nguyễn Mai Chí Trung');
+
+    //Set the subject line
+    $mail->Subject = $sb;
+
+    //Read an HTML message body from an external file, convert referenced images to embedded,
+    //convert HTML into a basic plain-text alternative body
+    $mail->Body = $body;
+    $mail->AltBody = $body;
+
+    //Replace the plain text body with one created manually
+    //$mail->AltBody = 'This is a plain-text message body';
+
+    //Attach an image file
+    //$mail->addAttachment('images/phpmailer_mini.png');
+
+    //send the message, check for errors
+    if (!$mail->send()) {
+        echo "Mailer Error: " . $mail->ErrorInfo;
+    } else {
+        echo "Message sent!";
+    }
+}
+?>
 		</div>
 	</div>
 	<!-- //contact -->
+	<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+				<span>M</span>ap
+				<span>S</span>hop
+			</h3>
+	<!-- map -->
+		<div class="container">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5486230050305!2d106.79235511411696!3d10.845813560876465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527158a0a5b81%3A0xf45c5d34ac580517!2zUEjDgk4gSEnhu4ZVIFRSxq_hu5xORyDEkEggR1RWVCBU4bqgSSBUUC4gSOG7kiBDSMONIE1JTkg!5e0!3m2!1svi!2s!4v1622883878979!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+	<!-- map end -->
     <?php
 	include('include/footer.php'); 
 	?>

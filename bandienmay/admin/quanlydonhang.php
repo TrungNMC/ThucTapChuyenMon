@@ -36,6 +36,11 @@ if(isset($_POST['capnhatdonhang'])){
 	<form method="post">
 	<h6 class="m-0 font-weight-bold text-primary">Liệt kê đơn hàng <input style="width: 250px; height: 40px; border-radius: 20px; border: #ccc;padding-left: 20px;" type="text" placeholder="Search..." name="searchdata"><button style="width: 42px; height: 40px; border-radius: 20px; border: #ccc;" type="text" placeholder="Search..." name="search"><i class="fas fa-search"></i></button> </h6>
 	</form>
+	<br/>
+	<div class="card-header py-3">
+	<a href="excel_donhang.php" class="btn btn-success" target="_blank">Xuất Excel</a>
+	<a href="pdf_donhang.php" class="btn btn-danger">Xuất PDF</a>
+	</div>
   </div>
   <?php
 		if(isset($_POST['search'])){
@@ -47,20 +52,20 @@ if(isset($_POST['capnhatdonhang'])){
 
     <div class="table-responsive">
             <?php
-				$sql_select = mysqli_query($con,"SELECT * FROM tbl_sanpham,tbl_khachhang,tbl_donhang WHERE tbl_donhang.sanpham_id=tbl_sanpham.sanpham_id AND tbl_donhang.khachhang_id=tbl_khachhang.khachhang_id and tbl_donhang.mahang like '%$data%' GROUP BY mahang "); 
+				$sql_select = mysqli_query($con,"SELECT * FROM tbl_sanpham,tbl_khachhang,tbl_donhang WHERE tbl_donhang.mahang like '%$data%' OR tbl_khachhang.name like '%$data%' AND tbl_donhang.sanpham_id=tbl_sanpham.sanpham_id AND tbl_donhang.khachhang_id=tbl_khachhang.khachhang_id GROUP BY mahang "); 
 			?> 
 
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
-                        <th>Thứ tự</th>
-						<th>Mã đơn hàng</th>
-						<th>Tình trạng đơn hàng</th>
-						<th>Tên khách hàng</th>
-						<th>Ngày đặt</th>
-						<th>Ghi chú</th>
-						<th>Hủy đơn</th>
-						<th>Quản lý</th>
+							<th>Thứ tự</th>
+							<th>Mã đơn hàng</th>
+							<th>Tình trạng đơn hàng</th>
+							<th>Tên khách hàng</th>
+							<th>Ngày đặt</th>
+							<th>Ghi chú</th>
+							<th>Hủy đơn</th>
+							<th>Quản lý</th>
           </tr>
           </thead>
           <tbody>
@@ -120,6 +125,7 @@ if(isset($_POST['capnhatdonhang'])){
 						<th>Số lượng</th>
 						<th>Giá</th>
 						<th>Tổng tiền</th>
+						<!-- <th>Tổng đơn</th> -->
 						<th>Ngày đặt</th>
 					</tr>
                     </thead>
@@ -137,11 +143,8 @@ if(isset($_POST['capnhatdonhang'])){
 						<td><?php echo $row_donhang['soluong']; ?></td>
 						<td><?php echo $row_donhang['sanpham_giakhuyenmai']; ?></td>
 						<td><?php echo number_format($row_donhang['soluong']*$row_donhang['sanpham_giakhuyenmai']).'vnđ'; ?></td>
-						
 						<td><?php echo $row_donhang['ngaythang'] ?></td>
 						<input type="hidden" name="mahang_xuly" value="<?php echo $row_donhang['mahang'] ?>">
-
-						<!-- <td><a href="?xoa=<?php echo $row_donhang['donhang_id'] ?>">Xóa</a> || <a href="?quanly=xemdonhang&mahang=<?php echo $row_donhang['mahang'] ?>">Xem đơn hàng</a></td> -->
 					</tr>
 					 <?php
 					} 
@@ -167,7 +170,6 @@ if(isset($_POST['capnhatdonhang'])){
     </div>
 </div>
 <!-- /.container-fluid -->
-
 
 <?php
 include('includes/scripts.php');

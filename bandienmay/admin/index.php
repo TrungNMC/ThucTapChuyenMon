@@ -3,6 +3,7 @@ include('includes/header.php');
 include('includes/navbar.php'); 
 ?>
 
+
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -54,13 +55,13 @@ include('includes/navbar.php');
                             </div>
                              <?php
                               $con = mysqli_connect("localhost", "root", "", "bandienmay");  
-                              $query = "SELECT SUM(tbl_sanpham.sanpham_giakhuyenmai * tbl_donhang.soluong) as 'tongtien' FROM tbl_donhang, tbl_sanpham WHERE tbl_sanpham.sanpham_id = tbl_donhang.sanpham_id AND YEAR(tbl_donhang.ngaythang)= YEAR(CURDATE())";
+                              $query = "SELECT SUM(tbl_sanpham.sanpham_giakhuyenmai * tbl_donhang.soluong) as 'tongtien' FROM tbl_donhang, tbl_sanpham WHERE tbl_sanpham.sanpham_id = tbl_donhang.sanpham_id AND tbl_donhang.huydon = 0 AND YEAR(tbl_donhang.ngaythang)= YEAR(CURDATE())";
                               $query_run = mysqli_query($con, $query);
                               $result1 = mysqli_num_rows($query_run);
                               while($row = mysqli_fetch_array($query_run)){
-                                  $tongtien = $row['tongtien'];
+                                  $tongtien = number_format($row['tongtien']);
                               }      
-                              echo "<h5>$tongtien</h5>" ;
+                              echo "<h5>$tongtien(vnđ)</h5>" ;
                             ?>
                         </div>
                         <div class="col-auto">
@@ -140,10 +141,94 @@ include('includes/navbar.php');
                 </div>
             </div>
         </div>
+        <div class="container-fluid">
+        <div class="card-body">
+        <!-- Biểu đồ starst -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
 
-    <!-- Content Row -->
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Tháng', 'Doanh thu'],
+          <?php
+           $con = mysqli_connect("localhost","root","","bandienmay");  
+           $sql = "SELECT MONTH(tbl_donhang.ngaythang) as 'thang', SUM(soluong*tbl_sanpham.sanpham_giakhuyenmai) as 'doanhthu' FROM tbl_donhang, tbl_sanpham WHERE tbl_sanpham.sanpham_id = tbl_donhang.sanpham_id AND tbl_donhang.huydon = 0 AND YEAR(tbl_donhang.ngaythang)= YEAR(CURDATE()) GROUP BY MONTH(tbl_donhang.ngaythang)";  
+           $buscar = mysqli_query($con, $sql);
+           
+           while($dados = mysqli_fetch_array($buscar))  
+           {  
+                $thang = $dados['thang'];
+                $doanhthu = $dados['doanhthu'];
+                ?>
+                 ['<?php echo $thang ?>', <?php echo $doanhthu ?>],
+                 <?php }  ?>
+        ]);
+
+        var options = {
+          title: 'Biểu đồ doanh thu theo tháng Năm 2021',
+          hAxis: {title: 'Tháng',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 100%; height: 500px;"></div>
 </div>
+</div>
+    <!-- Biểu đồ end -->
+        <!-- Biểu đồ 3D starst -->
+        <div class="container-fluid">
+        <div class="card-body">
+        <?php  
+            $con = mysqli_connect("localhost","root","","bandienmay");  
+            $query = "SELECT tbl_category.category_name, SUM(sanpham_soluong) as number FROM tbl_sanpham, tbl_category WHERE tbl_sanpham.category_id = tbl_category.category_id GROUP BY tbl_sanpham.category_id";  
+            $result = mysqli_query($con, $query);  
+        ?>  
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  
+           <script type="text/javascript">  
+           google.charts.load('current', {'packages':['corechart']});  
+           google.charts.setOnLoadCallback(drawChart);  
+           function drawChart()  
+           {  
+                var data = google.visualization.arrayToDataTable([  
+                          ['Danh mục', 'Số lượng'],  
+                          <?php  
+                          while($row = mysqli_fetch_array($result))  
+                          {  
+                               echo "['".$row["category_name"]."', ".$row["number"]."],";  
+                          }  
+                          ?>  
+                     ]);  
+                var options = {  
+                      title: 'Biểu đồ  thống kê sản phẩm theo danh mục',  
+                      is3D:true,  
+                     };  
+                var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
+                chart.draw(data, options);  
+           }  
+           </script>  
+           <br /><br />  
+           <div style="width:auto;">  
+              
+                <div id="piechart" style="width: auto; height: 300px; text-align: center;"></div>  
+           </div>  
+           
+</div>
+    <!-- Content Row -->
+    
+</div>
+<!-- Biểu đồ 3D end -->
 
+
+
+
+</div>
 
 
 

@@ -4,7 +4,7 @@
 	$tukhoa = $_POST['search_product'];
 	
 		
-	$sql_product = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE sanpham_name LIKE '%$tukhoa%' ORDER BY sanpham_id DESC");		
+	$sql_product = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE sanpham_name LIKE '%$tukhoa%' or sanpham_giakhuyenmai LIKE '%$tukhoa%' ORDER BY sanpham_id DESC");		
 
 	$title = $tukhoa;
 	}		

@@ -10,7 +10,7 @@
 				<div class="agileinfo-ads-display col-lg-9">
 					<div class="wrapper">
 						<?php
-						$sql_cate_home = mysqli_query($con,"SELECT *FROM tbl_category ORDER BY category_id DESC");
+						$sql_cate_home = mysqli_query($con,"SELECT *FROM tbl_category ORDER BY category_id DESC LIMIT 13");
 						while($row_cate_home = mysqli_fetch_array($sql_cate_home)){
 							$id_category = $row_cate_home['category_id'];
 						?>
@@ -19,7 +19,7 @@
 							<h3 class="heading-tittle text-center font-italic"><?php echo $row_cate_home['category_name'] ?></h3>
 							<div class="row">
 								<?php
-								$sql_product = mysqli_query($con,"SELECT * FROM tbl_sanpham ORDER BY sanpham_id DESC");
+								$sql_product = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE category_id='$id_category' limit 3 ");
 								while($row_sanpham = mysqli_fetch_array($sql_product)){ 
 									if($row_sanpham['category_id']==$id_category){
 								?>
