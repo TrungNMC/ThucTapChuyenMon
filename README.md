@@ -88,9 +88,8 @@ Phần 3: Các chức năng chưa hoàn thành:
 
 
 Hướng dẫn sử dụng:
-1.	Mở file .exe và làm theo hướng dẫn README.txt.
-2.	Run chương trình.
-3.	Khách hàng đăng nhập với tài khoản khách "trung@gmail.com" và mật khẩu "123456". Thao tác với các chức năng đã đã nêu trên
-4.	ADMIN đăng nhập với tài khoản "admin@gmail.com" và mật khẩu "admin". Thao tác với các chức năng đã đã nêu trên
+1.	Run chương trình.
+2.	Khách hàng đăng nhập với tài khoản khách "trung@gmail.com" và mật khẩu "123456". Thao tác với các chức năng đã đã nêu trên
+3.	ADMIN đăng nhập với tài khoản "admin@gmail.com" và mật khẩu "admin". Thao tác với các chức năng đã đã nêu trên
 Xin cám ơn!
 
