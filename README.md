@@ -22,7 +22,9 @@ Phần 1: Công nghệ sử dụng:
 Phần 2: Các chức năng đã hoàn thành:
 
 Xây dựng Cơ sở dữ liệu quản lí Cửa hàng điện tử
+
 I.	Trang khách hàng 
+
 1.	Chức năng đăng nhập, đăng ký tài khoản bên khách hàng 
 2.	Chức năng đăng xuất tài khoản khách hàng
 3.	Chức năng hiển thị danh sách các sản phẩm
