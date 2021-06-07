@@ -85,6 +85,7 @@ Phần 3: Các chức năng chưa hoàn thành:
 2.	Thanh toán onl
 3.	Quet mã QR
 4.	Mess plugin
+
 (Đang nghiên cứu)
 
 Hướng dẫn sử dụng:
