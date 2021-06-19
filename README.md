@@ -42,7 +42,7 @@ I.	Trang khách hàng
 	+  Cập nhật giỏ hàng
 	+  Cập nhật giỏ hàng
 9.	Chức năng thanh toán 
-10.	Chức năng thanh toán onl
+10.	Chức năng thanh toán onl paypal
 11.	Chức năng hiển thị bài viết ( chi tiết bài viết )
 12.	Chức năng danh sách các sản phẩm nổi bật của shop
 13.	Chức năng liên hệ shop bằng cách gửi gmail
