@@ -21,7 +21,7 @@ Phần 1: Công nghệ sử dụng:
 	
 Phần 2: Các chức năng đã hoàn thành:
 
-Xây dựng Cơ sở dữ liệu quản lí Cửa hàng điện tử
+Xây dựng Cơ sở dữ liệu quản lí Cửa hàng bán điện tử
 
 I.	Trang khách hàng 
 
