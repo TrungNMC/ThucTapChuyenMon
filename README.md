@@ -42,10 +42,12 @@ I.	Trang khách hàng
 	+  Cập nhật giỏ hàng
 	+  Cập nhật giỏ hàng
 9.	Chức năng thanh toán 
-10.	Chức năng hiển thị bài viết ( chi tiết bài viết )
-11.	Chức năng danh sách các sản phẩm nổi bật của shop
-12.	Chức năng liên hệ shop bằng cách gửi gmail
-13.	Chức năng hiển thị google map api địa chỉ cửa hàng
+10.	Chức năng thanh toán onl
+11.	Chức năng hiển thị bài viết ( chi tiết bài viết )
+12.	Chức năng danh sách các sản phẩm nổi bật của shop
+13.	Chức năng liên hệ shop bằng cách gửi gmail
+14.	Chức năng hiển thị google map api địa chỉ cửa hàng
+15.	Chức năng mess plugin chat giữa khách hàng với fb page
 
 II.	Trang  admin 
 
@@ -82,10 +84,7 @@ II.	Trang  admin
 Phần 3: Các chức năng chưa hoàn thành:
 
 1.	Đăng nhập facbook, gmail
-2.	Thanh toán onl
-3.	Quet mã QR
-4.	Mess plugin
-
+2. 	Đánh giá từng sản phẩm
 (Đang nghiên cứu)
 
 Hướng dẫn sử dụng:
