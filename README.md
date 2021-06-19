@@ -48,6 +48,7 @@ I.	Trang khách hàng
 13.	Chức năng liên hệ shop bằng cách gửi gmail
 14.	Chức năng hiển thị google map api địa chỉ cửa hàng
 15.	Chức năng mess plugin chat giữa khách hàng với fb page
+16.	Chức năng đánh giá 
 
 II.	Trang  admin 
 
@@ -84,7 +85,6 @@ II.	Trang  admin
 Phần 3: Các chức năng chưa hoàn thành:
 
 1.	Đăng nhập facbook, gmail
-2. 	Đánh giá từng sản phẩm
 (Đang nghiên cứu)
 
 Hướng dẫn sử dụng:
