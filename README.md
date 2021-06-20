@@ -41,7 +41,7 @@ I.	Trang khách hàng
 	+  Xóa lượng từng sản phẩm trong giỏ hàng
 	+  Cập nhật giỏ hàng
 	+  Cập nhật giỏ hàng
-9.	Chức năng thanh toán 
+9.	Chức năng thanh toán cod
 10.	Chức năng thanh toán onl paypal
 11.	Chức năng hiển thị bài viết ( chi tiết bài viết )
 12.	Chức năng danh sách các sản phẩm nổi bật của shop
