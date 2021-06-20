@@ -49,7 +49,7 @@ I.	Trang khách hàng
 14.	Chức năng hiển thị google map api địa chỉ cửa hàng
 15.	Chức năng mess plugin chat giữa khách hàng với fb page
 16.	Chức năng đánh giá 
-17. 	Deploy web
+17.	Deploy web
 II.	Trang  admin 
 
 1.	Chức năng đăng nhập tài khoản admin
