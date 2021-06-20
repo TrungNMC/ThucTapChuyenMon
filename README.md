@@ -7,7 +7,7 @@ MSV: 5951071112
 
 Lớp: Công nghệ thông tin-K59
 	
-Đề tài: QUẢN LÍ CỬA HÀNG ĐIỆN TỬ – PHP,MYSQL
+Đề tài: QUẢN LÍ CỬA HÀNG BÁN ĐIỆN MÁY – PHP,MYSQL
 
 Giảng viên: Thầy Nguyễn Lê Minh. 
 
@@ -21,7 +21,7 @@ Phần 1: Công nghệ sử dụng:
 	
 Phần 2: Các chức năng đã hoàn thành:
 
-Xây dựng Cơ sở dữ liệu quản lí Cửa hàng điện tử
+Xây dựng Cơ sở dữ liệu quản lí Cửa hàng bán điện máy
 
 I.	Trang khách hàng 
 
@@ -48,7 +48,8 @@ I.	Trang khách hàng
 13.	Chức năng liên hệ shop bằng cách gửi gmail
 14.	Chức năng hiển thị google map api địa chỉ cửa hàng
 15.	Chức năng mess plugin chat giữa khách hàng với fb page
-
+16.	Chức năng đánh giá 
+17. 	Deploy web
 II.	Trang  admin 
 
 1.	Chức năng đăng nhập tài khoản admin
@@ -84,7 +85,6 @@ II.	Trang  admin
 Phần 3: Các chức năng chưa hoàn thành:
 
 1.	Đăng nhập facbook, gmail
-2. 	Đánh giá từng sản phẩm
 (Đang nghiên cứu)
 
 Hướng dẫn sử dụng:
