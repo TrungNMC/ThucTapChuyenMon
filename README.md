@@ -50,6 +50,7 @@ I.	Trang khách hàng
 15.	Chức năng mess plugin chat giữa khách hàng với fb page
 16.	Chức năng đánh giá 
 17.	Deploy web
+
 II.	Trang  admin 
 
 1.	Chức năng đăng nhập tài khoản admin
