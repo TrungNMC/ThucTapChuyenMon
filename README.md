@@ -48,8 +48,9 @@ I.	Trang khách hàng
 13.	Chức năng liên hệ shop bằng cách gửi gmail
 14.	Chức năng hiển thị google map api địa chỉ cửa hàng
 15.	Chức năng mess plugin chat giữa khách hàng với fb page
-16.	Chức năng đánh giá 
-17.	Deploy web
+16.	Chức năng live chat, share, chat zalo, gọi điện
+17.	Chức năng đánh giá 
+18.	Deploy web
 
 II.	Trang  admin 
 
